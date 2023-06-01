@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/01 17:15:44 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/01 20:20:16 by zbabahmi         ###   ########.fr       */
+/*   Created: 2023/06/01 20:18:13 by zbabahmi          #+#    #+#             */
+/*   Updated: 2023/06/01 20:19:56 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <limits.h>
-
-typedef struct  s_savage
+void	error(void)
 {
-	int	*stack_a;
-	int	*stack_b;
+	write (2, "ERROR\n", 6);
+	exit (1);
+}
 
-}t_savage;
-
-void	error(void);
-
-#endif

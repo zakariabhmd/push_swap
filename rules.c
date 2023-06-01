@@ -3,11 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   rules.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zbabahmi <zbabahmi@student.42.fr>              +#+  +:+       +#+    */
+/*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/20 10:30:25 by zbabahmi            #+#    #+#           */
-/*   Updated: 2023/04/20 10:30:25 by zbabahmi           ###   ########.fr     */
+/*   Created: 2023/06/01 17:20:29 by zbabahmi          #+#    #+#             */
+/*   Updated: 2023/06/01 17:24:55 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swaap.h"
+#include "push_swap.h"
+
+void	sa(t_savage *a)
+{
+
+}
