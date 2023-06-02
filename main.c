@@ -1,40 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   errors.c                                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/01 20:18:13 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/01 20:46:49 by zbabahmi         ###   ########.fr       */
+/*   Created: 2023/06/01 20:48:08 by zbabahmi          #+#    #+#             */
+/*   Updated: 2023/06/01 21:07:53 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	err(void)
+void	fill_stack(char **av, t_savage *s)
 {
-	write (2, "ERROR\n", 6);
-	exit (1);
-}
-
-void	duplicate(int *num, int len)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	j = 0;
-	while(i < len)
+	int i = 1;
+	char **str;
+	while (av[i])
 	{
-		j = 0;
-		while(j < i)
+		str = ft_split(av[i], ' ');
+		int j = 0;
+		while (str[j])
 		{
-			if (num[i] == num[j])
-			err();
+			s->stack_a[j] = ft_atoi(str[j]);
+			puts(str[i]);
+			printf("%d\n", s->stack_a[j]);
+			j++;
 		}
-		j++;
+		i++;
 	}
-	i++;
 }
-
+int main(int ac, char **av)
+{
+	t_savage s;
+	if (ac == 1)
+		exit(1);
+	else
+	{
+		fill_stack(av, &s);
+	}
+}

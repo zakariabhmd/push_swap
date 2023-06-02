@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 17:15:44 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/01 20:20:16 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/01 21:05:41 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+# include <stdio.h>
+
 
 typedef struct  s_savage
 {
@@ -24,6 +26,9 @@ typedef struct  s_savage
 
 }t_savage;
 
-void	error(void);
+char	**ft_split(char const *s, char c);
+int		ft_atoi(const char *str);
+void	err(void);
+void	duplicate(int *num, int len);
 
 #endif
