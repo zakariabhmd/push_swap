@@ -6,12 +6,12 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:58:45 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/01 21:01:54 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/02 18:34:22 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char *s, unsigned int start, size_t len)
 {
 	char	*str;
 	size_t	a;
@@ -34,7 +34,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[b] = '\0';
 	return (str);
 }
-int	counter(const char *tpm, char c)
+int	counter(char *tpm, char c)
 {
 	int	i;
 	int	count;
@@ -55,7 +55,7 @@ int	counter(const char *tpm, char c)
 	return (i);
 }
 
-int	size_word(char const *s, char c, int i)
+int	size_word(char *s, char c, int i)
 {
 	int	size;
 
@@ -68,7 +68,7 @@ int	size_word(char const *s, char c, int i)
 	return (size);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char *s, char c)
 {
 	int		i;
 	int		word;
@@ -94,11 +94,11 @@ char	**ft_split(char const *s, char c)
 	return (sp);
 }
 
-int	ft_atoi(const char *str)
+int	ft_atoi(char *str)
 {
 	int	i;
 	int	sign;
-	int	result;
+	long	result;
 
 	i = 0;
 	sign = 1;
@@ -109,15 +109,76 @@ int	ft_atoi(const char *str)
 	{
 		sign = -1;
 		i++;
+		if (!(str[i] >= '0' && str[i] <= '9'))
+			err();
 	}
 	else if (str[i] == '+')
+	{
 		i++;
+		if (!(str[i] >= '0' && str[i] <= '9'))
+			err();
+	}
 	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
 	{
 		result *= 10;
 		result += str[i] - '0';
+		if (result == 2147483648 && sign == -1)
+			return (sign * result);
+		else if (result > 2147483647)
+			err();
 		i++;
 	}
 	return (result * sign);
 }
 
+char	*ft_strjoin(char *s1, char *s2)
+{
+	char	*str;
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	str = malloc(sizeof(char) * ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!str)
+		return (NULL);
+	else
+	{
+		while (s1[i])
+			str[j++] = s1[i++];
+	}
+	i = 0;
+	while (s2[i])
+		str[j++] = s2[i++];
+	str[j] = '\0';
+	return (str);
+}
+
+size_t	ft_strlen(char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+char	*ft_strdup(char *s1)
+{
+	char	*i;
+	size_t	alpha;
+	size_t	beta;
+
+	beta = 0;
+	alpha = ft_strlen(s1);
+	i = (char *)malloc(sizeof(char) * (alpha) + 1);
+	if (!i)
+		return (0);
+	while (beta < alpha)
+	{
+		i[beta] = s1[beta];
+		beta++;
+	}
+	i[beta] = '\0';
+	return (i);
+}
