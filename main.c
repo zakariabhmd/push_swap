@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:48:08 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/03 20:16:56 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/04 20:42:55 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,14 @@
 void	index_stack(t_savage *s)
 {
 	int	*stack_tmp;
-	int	i;
-	int	j;
-	stack_tmp = malloc(sizeof(int) * s->size);
-	i = s->size - 1;
-	j = 0;
-	while(j < s->size)
-	{
-		s->stack_a[j++] = stack_tmp[i--];
-	}
+	int i = 0;
 
+	stack_tmp = malloc(sizeof(int) * s->size);
+	while (i < s->size)
+	{
+		stack_tmp[i] = s->stack_a[i];
+		i++;
+	}
 }
 
 int	countarg(char **str)
