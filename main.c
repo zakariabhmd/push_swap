@@ -6,14 +6,32 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:48:08 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/03 18:33:59 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/03 20:16:56 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-int countarg(char **str)
+
+void	index_stack(t_savage *s)
 {
-	int i = 1;
+	int	*stack_tmp;
+	int	i;
+	int	j;
+	stack_tmp = malloc(sizeof(int) * s->size);
+	i = s->size - 1;
+	j = 0;
+	while(j < s->size)
+	{
+		s->stack_a[j++] = stack_tmp[i--];
+	}
+
+}
+
+int	countarg(char **str)
+{
+	int	i;
+
+	i = 1;
 	while (str[i])
 		i++;
 	return (i);
@@ -37,34 +55,38 @@ char	**fill_args(int ac, char **av)
 }
 void	fill_stack(char **av, int ac, t_savage *s)
 {
-	int i = 1;
-	int j;
-	int x;
-	char **str;
-	int size;
+	int		i;
+	int		j;
+	int		x;
+	char	**str;
 
+	i = 1;
 	str = fill_args(ac, av);
-	size = countarg(str);
-	s->stack_a = malloc(sizeof(int) * size);
+	s->size = countarg(str);
+	s->stack_a = malloc(sizeof(int) * s->size);
 	s->top_a = -1;
-	s->stack_b = malloc(sizeof(int) * size);
+	s->stack_b = malloc(sizeof(int) * s->size);
 	s->top_b = -1;
 	x = 0;
-	j = size - 1;
-	while(x < size)
+	j = s->size - 1;
+	while (x < s->size)
 	{
 		s->stack_a[x++] = ft_atoi(str[j--]);
 		s->top_a++;
 	}
-	duplicate(s-> stack_a, size);
+	duplicate(s-> stack_a, s->size);
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	t_savage s;
+	t_savage	s;
 
 	if (ac == 1)
-		exit(1);
+		exit (1);
 	else
+	{
 		fill_stack(av, ac, &s);
+		index_stack(&s);
+	}
+
 }

@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 17:15:44 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/03 19:06:50 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/03 20:17:05 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@
 typedef struct  s_savage
 {
 	int	*stack_a;
-	int top_a;
+	int	top_a;
 	int	*stack_b;
-	int top_b;
+	int	top_b;
+	int	size;
 
 }t_savage;
 
