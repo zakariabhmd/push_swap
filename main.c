@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:48:08 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/04 20:42:55 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/04 20:12:21 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int	countarg(char **str)
 		i++;
 	return (i);
 }
+
 char	**fill_args(int ac, char **av)
 {
 	char	*str;
@@ -51,6 +52,7 @@ char	**fill_args(int ac, char **av)
 	nexos = ft_split(str, ' ');
 	return (nexos);
 }
+
 void	fill_stack(char **av, int ac, t_savage *s)
 {
 	int		i;
