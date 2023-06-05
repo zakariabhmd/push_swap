@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:48:08 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/05 13:44:24 by codespace        ###   ########.fr       */
+/*   Updated: 2023/06/05 17:15:39 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,23 @@ void	index_stack(t_savage *s)
 	while (i < s->size)
 	{
 		stack_tmp[i] = s->stack_a[i];
-		
 		i++;
 	}
 	i = 0;
 	while (i < s->size)
 	{
-		if (stack_tmp[i] > stack_tmp[i + 1])
+		int j = i + 1;
+		while (j < s->size)
 		{
-			sort = stack_tmp[i];
-			stack_tmp[i] = stack_tmp[i + 1];
-			stack_tmp[i - 1] = sort;
+			if (stack_tmp[i] < stack_tmp[j])
+			{
+				sort = stack_tmp[i];
+				stack_tmp[i] = stack_tmp[j];
+				stack_tmp[j] = sort;
+			}
+			j++;
 		}
-		if (stack_tmp[i] < stack_tmp[i + 1])
 		i++;
-			printf("%d\n", stack_tmp[i]);
 	}
 }
 
