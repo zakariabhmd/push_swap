@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:48:08 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/04 20:12:21 by codespace        ###   ########.fr       */
+/*   Updated: 2023/06/05 13:44:24 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,27 @@ void	index_stack(t_savage *s)
 {
 	int	*stack_tmp;
 	int i = 0;
+	int	sort;
 
 	stack_tmp = malloc(sizeof(int) * s->size);
 	while (i < s->size)
 	{
 		stack_tmp[i] = s->stack_a[i];
+		
 		i++;
+	}
+	i = 0;
+	while (i < s->size)
+	{
+		if (stack_tmp[i] > stack_tmp[i + 1])
+		{
+			sort = stack_tmp[i];
+			stack_tmp[i] = stack_tmp[i + 1];
+			stack_tmp[i - 1] = sort;
+		}
+		if (stack_tmp[i] < stack_tmp[i + 1])
+		i++;
+			printf("%d\n", stack_tmp[i]);
 	}
 }
 
