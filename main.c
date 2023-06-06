@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:48:08 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/06 20:01:08 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/07 00:05:59 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,7 @@ int	main(int ac, char **av)
 	{
 		fill_stack(av, ac, &s);
 		index_stack(&s);
-		sort_three(&s);
+		sort_five(&s);
+		// sort_three(&s);
 	}
 }
