@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:48:08 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/05 22:33:46 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/06 20:01:08 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	index_stack(t_savage *s)
 		j = i + 1;
 		while (j < s->size)
 		{
-			if (stack_tmp[i] < stack_tmp[j])
+			if (stack_tmp[i] > stack_tmp[j])
 			{
 				sort = stack_tmp[i];
 				stack_tmp[i] = stack_tmp[j];
@@ -42,17 +42,13 @@ void	index_stack(t_savage *s)
 		i++;
 	}
 	i = 0;
-	while (i < s->size)
+	while (i <= s->size - 1)
 	{
 		j = 0;
-		while (j < s->size)
-		{
-			if (s->stack_a[i] == stack_tmp[j])
-			{
-				s->stack_a[i] = j;
-			}
+		while (s->stack_a[i] != stack_tmp[j])
 			j++;
-		}
+		if (s->stack_a[i] == stack_tmp[j])
+			s->stack_a[i] = j;
 		i++;
 	}
 }
@@ -119,6 +115,6 @@ int	main(int ac, char **av)
 	{
 		fill_stack(av, ac, &s);
 		index_stack(&s);
+		sort_three(&s);
 	}
-
 }

@@ -6,11 +6,12 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:58:45 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/02 18:34:22 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/06 20:53:52 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
 char	*ft_substr(char *s, unsigned int start, size_t len)
 {
 	char	*str;
@@ -34,6 +35,7 @@ char	*ft_substr(char *s, unsigned int start, size_t len)
 	str[b] = '\0';
 	return (str);
 }
+
 int	counter(char *tpm, char c)
 {
 	int	i;
@@ -163,6 +165,7 @@ size_t	ft_strlen(char *str)
 		i++;
 	return (i);
 }
+
 char	*ft_strdup(char *s1)
 {
 	char	*i;

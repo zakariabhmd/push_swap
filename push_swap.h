@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 17:15:44 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/04 21:05:08 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/06 20:54:27 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@
 # include <limits.h>
 # include <stdio.h>
 
-
-typedef struct  s_savage
+typedef struct s_savage
 {
 	int	*stack_a;
 	int	top_a;
@@ -29,7 +28,7 @@ typedef struct  s_savage
 
 }t_savage;
 
-char	**ft_split(char  *s, char c);
+char	**ft_split(char *s, char c);
 int		ft_atoi( char *str);
 void	err(void);
 void	duplicate(int *num, int len);
@@ -48,5 +47,7 @@ void	rra(t_savage *s);
 void	rrb(t_savage *s);
 void	pa(t_savage *s);
 void	pb(t_savage *s);
+//---------------------------------
+void	sort_three(t_savage *s);
 
 #endif
