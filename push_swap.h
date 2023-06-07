@@ -50,5 +50,6 @@ void	pb(t_savage *s);
 //---------------------------------
 void	sort_three(t_savage *s);
 void	sort_five(t_savage *s);
+void	sort_four(t_savage *s);
 
 #endif

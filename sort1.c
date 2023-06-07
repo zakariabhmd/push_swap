@@ -38,7 +38,18 @@ void	sort_three(t_savage *s)
 		rra(s);
 }
 
-void	sort_f
+void	sort_four(t_savage *s)
+{
+	while (s->stack_a[s->top_a] <= 2)
+		ra(s);
+	pb(s);
+	sort_three(s);
+	while(s->stack_b[s->top_b])
+	{
+		pa(s);
+		ra(s);
+	}
+}
 
 void	sort_five(t_savage *s)
 {

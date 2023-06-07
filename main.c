@@ -115,7 +115,8 @@ int	main(int ac, char **av)
 	{
 		fill_stack(av, ac, &s);
 		index_stack(&s);
-		sort_five(&s);
+		sort_four(&s);
+		// sort_five(&s);
 		// sort_three(&s);
 	}
 }
