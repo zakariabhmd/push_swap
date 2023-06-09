@@ -6,12 +6,24 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:48:08 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/07 00:05:59 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/09 22:51:37 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+int sorted(int *stack, int size)
+{
+	int i =0;
+	int x = 1;
+	while (i < size)
+	{
+		if (stack[i] < stack[i + 1])
+			x = 0;
+		i++;
+	}
+	return x;
+}
 void	index_stack(t_savage *s)
 {
 	int	*stack_tmp;
@@ -103,6 +115,8 @@ void	fill_stack(char **av, int ac, t_savage *s)
 		s->top_a++;
 	}
 	duplicate(s-> stack_a, s->size);
+	if (sorted(s->stack_a, s->size))
+		exit(0);
 }
 
 int	main(int ac, char **av)
@@ -115,8 +129,15 @@ int	main(int ac, char **av)
 	{
 		fill_stack(av, ac, &s);
 		index_stack(&s);
-		sort_four(&s);
-		// sort_five(&s);
-		// sort_three(&s);
+		if (s.size == 2)
+			sa(&s);
+		else if (s.size == 3)
+			sort_three(&s);
+		else if (s.size == 4)
+			sort_four(&s);
+		else if (s.size == 5)
+			sort_five(&s);
+		else if (s.size > 5 && s.size <= 100)
+			sort100(&s);
 	}
 }

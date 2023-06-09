@@ -6,10 +6,18 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 21:36:08 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/08 21:37:36 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/09 22:52:45 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	
+void	sort100(t_savage *s)
+{
+	int r;
+	int range;
+
+	r = 0;
+	range = 15;
+	
+}
