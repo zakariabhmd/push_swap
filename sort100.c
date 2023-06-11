@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 21:36:08 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/11 17:45:19 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/11 18:02:37 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,19 @@ void	push_back(t_savage *s)
 	i = 0;
 	while (s->top_b +1)
 	{
-		
+		if (s->stack_b[i] != s->top_b)
+			i++;
+		else if(i < s->top_b)
+		{
+			if (s->stack_b[s->top_b] != s->top_b)
+			rrb(s);
+		}
+		else if(i >= s->top_b)
+		{
+			if (s->stack_b[s->top_b] != s->top_b)
+			rb(s);
+		}
+		pa(s);
 	}
 }
 void	sort100(t_savage *s)
