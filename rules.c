@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 17:20:29 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/09 01:32:05 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/11 22:39:13 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	sa(t_savage *s)
 	s->stack_a[s->top_a] = s->stack_a[s->top_a - 1];
 	s->stack_a[s->top_a - 1] = i;
 	write (1, "sa\n", 3);
-	
 }
 
 void	sb(t_savage *s)

@@ -6,31 +6,36 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:48:08 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/11 17:18:23 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/11 22:43:36 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int sorted(int *stack, int size)
+int	sorted(int *stack, int size)
 {
-	int i =0;
-	int x = 1;
+	int	i;
+	int	x;
+
+	i = 0;
+	x = 1;
 	while (i < size)
 	{
 		if (stack[i] < stack[i + 1])
 			x = 0;
 		i++;
 	}
-	return x;
+	return (x);
 }
+
 void	index_stack(t_savage *s)
 {
 	int	*stack_tmp;
-	int i = 0;
+	int	i;
 	int	sort;
 	int	j;
 
+	i = 0;
 	stack_tmp = malloc(sizeof(int) * s->size);
 	while (i < s->size)
 	{
@@ -139,5 +144,7 @@ int	main(int ac, char **av)
 			sort_five(&s);
 		else if (s.size > 5 && s.size <= 100)
 			sort100(&s);
+		else if (s.size > 100 && s.size <= 500)
+			sort500(&s);
 	}
 }

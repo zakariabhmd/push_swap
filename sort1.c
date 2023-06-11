@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 22:38:54 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/11 17:22:15 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/11 22:38:47 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	sort_four(t_savage *s)
 		ra(s);
 	pb(s);
 	sort_three(s);
-	while(s->stack_b[s->top_b])
+	while (s->stack_b[s->top_b])
 	{
 		pa(s);
 		ra(s);
@@ -54,9 +54,9 @@ void	sort_five(t_savage *s)
 		ra(s);
 	pb(s);
 	sort_three(s);
-	if (s->stack_b[1] >  s->stack_b[0])
+	if (s->stack_b[1] > s->stack_b[0])
 		sb(s);
-	while(s->stack_b[s->top_b])
+	while (s->stack_b[s->top_b])
 	{
 		pa(s);
 		ra(s);

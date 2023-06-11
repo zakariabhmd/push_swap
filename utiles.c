@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:58:45 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/06 20:53:52 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/11 22:44:10 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,8 +98,8 @@ char	**ft_split(char *s, char c)
 
 int	ft_atoi(char *str)
 {
-	int	i;
-	int	sign;
+	int		i;
+	int		sign;
 	long	result;
 
 	i = 0;
