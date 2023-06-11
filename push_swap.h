@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 17:15:44 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/09 01:44:38 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/11 17:20:02 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,6 @@ void	pb(t_savage *s);
 void	sort_three(t_savage *s);
 void	sort_five(t_savage *s);
 void	sort_four(t_savage *s);
+void	sort100(t_savage *s);
 
 #endif
