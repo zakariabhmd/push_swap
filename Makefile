@@ -6,14 +6,14 @@
 #    By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/08 23:22:38 by zbabahmi          #+#    #+#              #
-#    Updated: 2023/06/11 22:46:23 by zbabahmi         ###   ########.fr        #
+#    Updated: 2023/06/12 12:48:34 by zbabahmi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 CC = @cc
 CFLAGS = -Wall -Werror -Wextra
-SRC = main.c errors.c rules.c rules1.c sort1.c utiles.c sort2.c
+SRC = main.c errors.c rules.c rules1.c sort1.c utiles.c sort2.c utiles2.c
 OBJ = $(SRC:.c=.o)
 RM = rm -rf
 
