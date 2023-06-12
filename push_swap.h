@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 17:15:44 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/12 13:07:20 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/12 17:43:33 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,10 @@ void	fill_stack(char **av, int ac, t_savage *s);
 char	*ft_strdup( char *s1);
 void	index_stack(t_savage *s);
 char	*ft_strdup(char *s1);
-void	a_help(char *str, int i, int sign);
+void	a_help(char *str, int *i, int *sign);
 void	index_help(t_savage *s, int i, int j, int *stack_tmp);
+void	index_help2(t_savage *s, int i, int j, int *stack_tmp);
+void	freestr(char **str);
 //--------------------------------
 void	sa(t_savage *s);
 void	sb(t_savage *s);

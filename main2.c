@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/12 13:00:47 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/12 13:09:23 by zbabahmi         ###   ########.fr       */
+/*   Created: 2023/06/12 14:53:32 by zbabahmi          #+#    #+#             */
+/*   Updated: 2023/06/12 17:43:22 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,20 @@ void	index_stack(t_savage *s)
 {
 	int	*stack_tmp;
 	int	i;
-	int	sort;
 	int	j;
 
+	j = 0;
 	i = 0;
 	stack_tmp = malloc(sizeof(int) * s->size);
+	index_help2(s, i, j, stack_tmp);
+	index_help(s, i, j, stack_tmp);
+	free(stack_tmp);
+}
+
+void	index_help2(t_savage *s, int i, int j, int *stack_tmp)
+{
+	int	sort;
+
 	while (i < s->size)
 	{
 		stack_tmp[i] = s->stack_a[i];
@@ -42,6 +51,10 @@ void	index_stack(t_savage *s)
 		}
 		i++;
 	}
+}
+
+void	index_help(t_savage *s, int i, int j, int *stack_tmp)
+{
 	i = 0;
 	while (i <= s->size - 1)
 	{
@@ -52,4 +65,17 @@ void	index_stack(t_savage *s)
 			s->stack_a[i] = j;
 		i++;
 	}
+}
+
+void	freestr(char **str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != NULL)
+	{
+		free(str[i]);
+		i++;
+	}
+	free (str);
 }

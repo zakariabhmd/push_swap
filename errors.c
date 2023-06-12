@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:18:13 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/03 20:16:43 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/12 17:50:15 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,10 @@ void	duplicate(int *num, int len)
 	int	j;
 
 	i = 0;
-	j = 0;
 	while (i < len)
 	{
-		j = 0;
-		while (j < i)
+		j = i + 1;
+		while (j < len)
 		{
 			if (num[i] == num[j])
 				err();
