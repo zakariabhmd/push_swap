@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:48:08 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/12 17:55:09 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/12 23:21:54 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,5 @@ int	main(int ac, char **av)
 			sort100(&s);
 		else if (s.size > 100 && s.size <= 500)
 			sort500(&s);
-		free(s.stack_a);
-		free(s.stack_b);
 	}
 }
