@@ -6,26 +6,24 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:48:08 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/13 21:04:52 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/13 22:57:48 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	sorted(int *stack, int size)
+int	sorted(t_savage *s)
 {
 	int	i;
-	int	x;
 
 	i = 0;
-	x = 1;
-	while (i < size)
+	while (i < s->size)
 	{
-		if (stack[i] < stack[i + 1])
-			x = 0;
+		if (s->stack_a[i] > s->stack_a[i + 1])
+			return(1);
 		i++;
 	}
-	return (x);
+	return (0);
 }
 
 int	countarg(char **str)
@@ -81,7 +79,7 @@ void	fill_stack(char **av, int ac, t_savage *s)
 	}
 	freestr(str);
 	duplicate(s-> stack_a, s->size);
-	if (sorted(s->stack_a, s->size))
+	if (sorted(s) == 1)
 		exit(0);
 }
 
