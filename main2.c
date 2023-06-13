@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 14:53:32 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/12 17:43:22 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/13 20:44:37 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,20 @@ void	freestr(char **str)
 		i++;
 	}
 	free (str);
+}
+
+void	check(char **str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (invalid(str[i]) == 0)
+		{
+			freestr(str);
+			err();
+		}
+		i++;
+	}
 }

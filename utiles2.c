@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 12:45:46 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/12 17:37:09 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/13 20:42:23 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,42 +68,34 @@ char	*ft_strdup(char *s1)
 
 int	ft_atoi(char *str)
 {
-	int		i;
-	int		sign;
-	long	result;
+	t_savage	s;
 
-	i = 0;
-	sign = 1;
-	result = 0;
-	a_help(str, &i, &sign);
-	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
+	s.i = 0;
+	s.sign = 1;
+	s.result = 0;
+	a_help(str, &s);
+	while (str[s.i] != '\0' && str[s.i] >= '0' && str[s.i] <= '9')
 	{
-		result *= 10;
-		result += str[i] - '0';
-		if (result == 2147483648 && sign == -1)
-			return (sign * result);
-		else if (result > 2147483647)
+		s.result *= 10;
+		s.result += str[s.i] - '0';
+		if (s.result == 2147483648 && s.sign == -1)
+			return (s.sign * s.result);
+		else if (s.result > 2147483647)
 			err();
-		i++;
+		s.i++;
 	}
-	return (result * sign);
+	return (s.result * s.sign);
 }
 
-void	a_help(char *str, int *i, int *sign)
+void	a_help(char *str, t_savage *s)
 {
-	while (str[*i] == 32 || (str[*i] >= 9 && str[*i] <= 13))
-		(*i)++;
-	if (str[*i] == '-')
+	while (str[s->i] == 32 || (str[s->i] >= 9 && str[s->i] <= 13))
+		s->i++;
+	if (str[s->i] == '-')
 	{
-		*sign = -1;
-		(*i)++;
-		if (!(str[*i] >= '0' && str[*i] <= '9'))
-			err();
+		s->sign = -1;
+		s->i++;
 	}
-	else if (str[*i] == '+')
-	{
-		(*i)++;
-		if (!(str[*i] >= '0' && str[*i] <= '9'))
-			err();
-	}
+	else if (str[s->i] == '+')
+		s->i++;
 }

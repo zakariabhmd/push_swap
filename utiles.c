@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:58:45 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/12 12:52:15 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/13 20:45:11 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,4 +94,26 @@ char	**ft_split(char *s, char c)
 	}
 	sp[j] = 0;
 	return (sp);
+}
+
+int	invalid(char *str)
+{
+	int	i;
+	int	flag;
+
+	i = 0;
+	flag = 0;
+	while (str[i])
+	{
+		if (str[i] == '+' || str[i] == '-')
+		{
+			if (flag == 1 || i > 0)
+				return (0);
+			flag = 1;
+		}
+		else if (!(str[i] >= '0' && str[i] <= '9'))
+			return (0);
+		i++;
+	}
+	return (1);
 }

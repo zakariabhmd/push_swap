@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:48:08 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/12 23:21:54 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/13 20:45:40 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void	fill_stack(char **av, int ac, t_savage *s)
 
 	i = 1;
 	str = fill_args(ac, av);
+	check(str);
 	s->size = countarg(str);
 	s->stack_a = malloc(sizeof(int) * s->size);
 	s->top_a = -1;
