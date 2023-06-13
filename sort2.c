@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 21:36:08 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/13 20:55:20 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/13 21:07:54 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	sort500(t_savage *s)
 	int	range;
 
 	r = 0;
-	range = 35;
+	range = 34;
 	while (s->top_a + 1)
 	{
 		if (s->stack_a[s->top_a] > range)
