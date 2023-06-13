@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:48:08 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/13 20:45:40 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/13 21:04:52 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ int	main(int ac, char **av)
 			sort_five(&s);
 		else if (s.size > 5 && s.size <= 100)
 			sort100(&s);
-		else if (s.size > 100 && s.size <= 500)
+		else if (s.size > 100)
 			sort500(&s);
 	}
 }
