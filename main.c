@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:48:08 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/13 22:57:48 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/14 16:29:24 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	fill_stack(char **av, int ac, t_savage *s)
 	j = s->size - 1;
 	while (x < s->size)
 	{
-		s->stack_a[x++] = ft_atoi(str[j--]);
+		s->stack_a[x++] = my_atoi(str[j--]);
 		s->top_a++;
 	}
 	freestr(str);
@@ -94,7 +94,7 @@ int	main(int ac, char **av)
 		fill_stack(av, ac, &s);
 		index_stack(&s);
 		if (s.size == 2)
-			sa(&s);
+			sort_two(&s);
 		else if (s.size == 3)
 			sort_three(&s);
 		else if (s.size == 4)
