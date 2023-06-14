@@ -12,18 +12,20 @@
 
 #include "push_swap.h"
 
-int	sorted(t_savage *s)
+int	sorted(int *stack, int size)
 {
 	int	i;
+	int	x;
 
 	i = 0;
-	while (i < s->size)
+	x = 1;
+	while (i < size)
 	{
-		if (s->stack_a[i] > s->stack_a[i + 1])
-			return(1);
+		if (stack[i] < stack[i + 1])
+			x = 0;
 		i++;
 	}
-	return (0);
+	return (x);
 }
 
 int	countarg(char **str)
@@ -57,12 +59,10 @@ char	**fill_args(int ac, char **av)
 
 void	fill_stack(char **av, int ac, t_savage *s)
 {
-	int		i;
 	int		j;
 	int		x;
 	char	**str;
 
-	i = 1;
 	str = fill_args(ac, av);
 	check(str);
 	s->size = countarg(str);
@@ -79,7 +79,7 @@ void	fill_stack(char **av, int ac, t_savage *s)
 	}
 	freestr(str);
 	duplicate(s-> stack_a, s->size);
-	if (sorted(s) == 1)
+	if (sorted(s->stack_a, s->size))
 		exit(0);
 }
 
