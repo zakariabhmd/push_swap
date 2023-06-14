@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 12:45:46 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/13 20:42:23 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/14 16:15:40 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char	*ft_strdup(char *s1)
 	return (i);
 }
 
-int	ft_atoi(char *str)
+long	my_atoi(char *str)
 {
 	t_savage	s;
 

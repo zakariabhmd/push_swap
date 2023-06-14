@@ -6,11 +6,17 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 22:38:54 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/13 22:31:06 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/14 16:28:52 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	sort_two(t_savage *s)
+{
+	if (s->stack_a[0] < s->stack_a[1])
+	sa(s);
+}
 
 void	sort_three(t_savage *s)
 {
@@ -38,11 +44,8 @@ void	sort_four(t_savage *s)
 		ra(s);
 	pb(s);
 	sort_three(s);
-	while (s->stack_b[s->top_b])
-	{
-		pa(s);
-		ra(s);
-	}
+	pa(s);
+	ra(s);
 }
 
 void	sort_five(t_savage *s)
@@ -56,9 +59,8 @@ void	sort_five(t_savage *s)
 	sort_three(s);
 	if (s->stack_b[1] > s->stack_b[0])
 		sb(s);
-	while (s->stack_b[s->top_b])
-	{
-		pa(s);
-		ra(s);
-	}
+	pa(s);
+	ra(s);
+	pa(s);
+	ra(s);
 }
