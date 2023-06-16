@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 22:38:54 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/14 16:28:52 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/16 21:35:32 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	sort_two(t_savage *s)
 {
 	if (s->stack_a[0] < s->stack_a[1])
-	sa(s);
+		sa(s);
 }
 
 void	sort_three(t_savage *s)
