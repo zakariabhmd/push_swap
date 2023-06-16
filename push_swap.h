@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 17:15:44 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/14 16:29:05 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/16 21:41:05 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void	index_help2(t_savage *s, int i, int j, int *stack_tmp);
 void	freestr(char **str);
 void	check(char **str);
 int		invalid(char *str);
+void	free_stack(t_savage *s);
 //--------------------------------
 void	sa(t_savage *s);
 void	sb(t_savage *s);
