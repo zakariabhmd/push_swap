@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:48:08 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/14 16:29:24 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/16 21:41:23 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,22 @@
 int	sorted(int *stack, int size)
 {
 	int	i;
-	int	x;
+	int	j;
 
 	i = 0;
-	x = 1;
 	while (i < size)
 	{
-		if (stack[i] < stack[i + 1])
-			x = 0;
+		j = i + 1;
+		while (j < size)
+		{
+			if (stack[i] < stack[j])
+				return (0);
+			else
+				j++;
+		}
 		i++;
 	}
-	return (x);
+	return (1);
 }
 
 int	countarg(char **str)
@@ -79,8 +84,6 @@ void	fill_stack(char **av, int ac, t_savage *s)
 	}
 	freestr(str);
 	duplicate(s-> stack_a, s->size);
-	if (sorted(s->stack_a, s->size))
-		exit(0);
 }
 
 int	main(int ac, char **av)
@@ -93,17 +96,21 @@ int	main(int ac, char **av)
 	{
 		fill_stack(av, ac, &s);
 		index_stack(&s);
-		if (s.size == 2)
-			sort_two(&s);
-		else if (s.size == 3)
-			sort_three(&s);
-		else if (s.size == 4)
-			sort_four(&s);
-		else if (s.size == 5)
-			sort_five(&s);
-		else if (s.size > 5 && s.size <= 100)
-			sort100(&s);
-		else if (s.size > 100)
-			sort500(&s);
+		if (sorted(s.stack_a, s.size) == 0)
+		{
+			if (s.size == 2)
+				sort_two(&s);
+			else if (s.size == 3)
+				sort_three(&s);
+			else if (s.size == 4)
+				sort_four(&s);
+			else if (s.size == 5)
+				sort_five(&s);
+			else if (s.size > 5 && s.size <= 100)
+				sort100(&s);
+			else if (s.size > 100)
+				sort500(&s);
+		}
+		free_stack(&s);
 	}
 }
