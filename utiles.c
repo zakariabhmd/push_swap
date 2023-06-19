@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:58:45 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/13 20:45:11 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/20 00:45:25 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ int	counter(char *tpm, char c)
 			count = 0;
 		tpm++;
 	}
+	if (i == 0)
+		err();
 	return (i);
 }
 
