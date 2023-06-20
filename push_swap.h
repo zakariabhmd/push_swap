@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 17:15:44 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/20 00:37:14 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/20 15:47:13 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ typedef struct s_savage
 
 char	**ft_split(char *s, char c);
 long	my_atoi( char *str);
-void	check_vide(char *str);
 void	err(void);
 void	duplicate(int *num, int len);
 char	*ft_strjoin(char *s1, char *s2);

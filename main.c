@@ -6,7 +6,7 @@
 /*   By: zbabahmi <zbabahmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 20:48:08 by zbabahmi          #+#    #+#             */
-/*   Updated: 2023/06/20 00:42:18 by zbabahmi         ###   ########.fr       */
+/*   Updated: 2023/06/20 15:46:17 by zbabahmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,25 +86,6 @@ void	fill_stack(char **av, int ac, t_savage *s)
 	freestr(str);
 	duplicate(s-> stack_a, s->size);
 }
-
-// void	check_vide(char *str)
-// {
-// 	int i;
-// 	int dex = 0;
-// 	i = 0;
-// 	while(str[i])
-// 	{
-// 		if (str[0] == '\0')
-// 			err();
-// 		if(str[i] != ' ')
-// 			dex++;
-// 		// else if(str[i] == ' ' && str[i + 1] == '\0')
-// 			// err();
-// 		i++;
-// 	}
-// 	if(dex == 0)
-// 		err();
-// }
 
 int	main(int ac, char **av)
 {
